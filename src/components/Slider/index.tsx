@@ -52,18 +52,12 @@ const Slider = () => {
 //console.log(load)
 
 	return (
-    <>
-		{/* <LoadContext.Consumer>{ ({load, setLoad}) => */}
-
-  
-      
-
-  			<div  className={style.homepage__slider}>
+  			<div className={style.homepage__slider}>
 
        
 
          
-           <div  >
+           <div>
           <AliceCarousel  autoPlay  autoPlayInterval={4500} infinite disableDotsControls disableButtonsControls>
             <Image
   			      src="/images/cargo1.jpg"
@@ -71,7 +65,7 @@ const Slider = () => {
   			      width={1200}
   			      height={600}
               layout="responsive"
-              {/* onLoadingComplete = {() => setLoad(true)} */}
+     
   			    />
   			    <Image
   			      src="/images/cargo2.jpg"
@@ -99,14 +93,16 @@ const Slider = () => {
             </div>
           </div>
       	</div>
-       
-		 {/* }}</LoadContext.Consumer> */}
-      </>
+   
 		)
 }
 
 export default Slider;
 
+//          {/* onLoadingComplete = {() => setLoad(true)} */}
+
+//  {/* <LoadContext.Consumer>{ ({load, setLoad}) => */}
+//     {/* }}</LoadContext.Consumer> */}
 //style={loading ? {display: 'none'} : {}}
 
 /*
