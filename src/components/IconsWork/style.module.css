@@ -1,0 +1,38 @@
+
+ 
+  .workIcons {
+    margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+      margin-bottom: 60px;
+}
+
+.workIcons__item {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);
+    width: 160px;
+    height: 160px;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px RGB(0 0 0/25%);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.workIcons__item p {
+      margin-top: 20px;
+  margin-bottom: 0px;
+  line-height: 1.2;
+}
+
+.workIcons__arrow {
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px  30px;
+}

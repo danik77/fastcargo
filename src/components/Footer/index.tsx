@@ -1,0 +1,33 @@
+import styles from '../../../styles/Styles.module.css' // переставити
+
+const Footer = () => {
+	return (
+		<div className={styles.footer}>
+			<div className={styles.container}>
+				<div className={styles.footer__inner}>
+					<div className="footer__1">
+						<h3>Телефон</h3>
+						<p>+380683334930</p>
+					</div>
+					<div className="footer__2">
+						<h3>Соцмережі</h3>
+						<p>facebook</p>
+					</div>
+					<div className="footer__3">
+						<h3>Email</h3>
+						<p>ADMIN@FASTCARGO.COM.UA</p>
+					</div>
+					<div className="footer__4">
+						<h3>Адреса</h3>
+						<p>ОФІС В УКРАЇНІ</p>
+					<p>М. ЛЬВІВ, ВУЛ. ПІД ГОЛОСКОМ 4-Б</p>
+					<p>ОФІС В ПОЛЬЩІ</p>
+					<p>37-700 PRZEMYŚL</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		)
+}
+
+export default Footer;

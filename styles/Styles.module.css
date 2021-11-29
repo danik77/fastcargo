@@ -1,0 +1,70 @@
+.container {
+	  z-index: 3;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: linear-gradient(284.89deg, #547608 40.15%, #7fd300 178.17%);
+    position: absolute;
+    z-index: 3;
+     width: 100%;
+}
+
+
+.social__item {
+    margin-right:  10px;
+}
+
+.phones__item {
+    margin-right:  10px;
+}
+
+
+.navPanel {
+  position: fixed;
+   z-index: 3;
+    bottom: 0;
+        margin-left: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	   
+    
+    flex-direction: column;
+background: #02d5268f;
+    border-radius: 14px;
+    padding: 20px 10px 40px 10px;
+ 
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom:  20px;
+    
+
+}
+
+.nav a:not(:last-child){
+	margin-right: 10px;
+}
+
+ 
+
+.footer {
+	background: linear-gradient(284.89deg, #547608 40.15%, #7fd300 178.17%);
+  padding: 50px 20px 150px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
