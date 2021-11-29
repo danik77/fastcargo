@@ -18,7 +18,7 @@ import React, { useState } from 'react';
 import LoadContext from '../src/components/context.js';
 
   
-
+const LangContext = React.createContext(null);
 
 const firebase = new Firebase();
 

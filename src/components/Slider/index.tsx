@@ -53,7 +53,7 @@ const Slider = () => {
 
 	return (
     <>
-		<LoadContext.Consumer>{ ({load, setLoad}) => 
+		{/* <LoadContext.Consumer>{ ({load, setLoad}) => */}
 
   
       
@@ -71,7 +71,7 @@ const Slider = () => {
   			      width={1200}
   			      height={600}
               layout="responsive"
-              onLoadingComplete = {() => setLoad(true)}
+              {/* onLoadingComplete = {() => setLoad(true)} */}
   			    />
   			    <Image
   			      src="/images/cargo2.jpg"
@@ -100,7 +100,7 @@ const Slider = () => {
           </div>
       	</div>
        
-		  }</LoadContext.Consumer>
+		 {/* }}</LoadContext.Consumer> */}
       </>
 		)
 }
