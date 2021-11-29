@@ -42,7 +42,7 @@ const Slider = () => {
 
 
     const handleLoading = () => {
-      console.log("ee")
+      console.log("e1e")
      // setLoad(true)
       //setLoad(true)
     }
