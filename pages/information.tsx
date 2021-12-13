@@ -51,7 +51,7 @@ const Information: NextPage = (props) => {
 
   return (
       <> 
-            <div style={{backgroundImage: 'url(/images/cargo3.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
+            <div style={{backgroundImage: 'url(/images/cargo4.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
             <div  className={styles.sliderStyle}></div>
 
     <div className={`${styles.container} ${styles.containerCentered}`}>
