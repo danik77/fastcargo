@@ -66,15 +66,15 @@ useEffect(() => {
       <Slider />
 
       <div className={`${styles.container} ${styles.white}`}>
-      <h1>{t('benefits-title')}</h1>
-        <IconsMain />  
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h1>{t('benefits-title')}</h1></AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}><IconsMain />  </AnimationOnScroll>
       </div>
       <div className={styles.colored}>
         <div className={styles.container} style={{padding: "20px 0px", fontSize: "18px", maxWidth: "900px"}}>
           <div className={styles.callback__wrap}>
             {/* <AnimationOnScroll animateIn="animate__bounceIn"> <div>d</div></AnimationOnScroll> */}
-            <h3>{t('about1')}</h3>
-            <p>{t('about2')}</p>
+           <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}> <h3>{t('about1')}</h3></AnimationOnScroll>
+           <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}> <p>{t('about2')}</p></AnimationOnScroll>
 <CallbackButton />
           </div>  
         </div>
@@ -83,7 +83,7 @@ useEffect(() => {
 
       {/* <div style={ backgroundImage: 'url(/images/cargo1.jpg)' className={`${styles.page}   ${styles.background}`}}> */}
       <div className={`${styles.container} ${styles.white}`}>
-<h1>{t('contacts-title')}</h1>
+<AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h1>{t('contacts-title')}</h1></AnimationOnScroll>
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
 
 
@@ -97,8 +97,8 @@ useEffect(() => {
        <div className={`${styles.container}`}>
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
-<AnimationOnScroll animateIn="animate__slideInLeft" animateOnce={true}><h3>{t('about4')}</h3></AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}><p> {t('about5')} {t('about6')} {t('about7')}</p></AnimationOnScroll>
+<AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><h3>{t('about4')}</h3></AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><p> {t('about5')} {t('about6')} {t('about7')}</p></AnimationOnScroll>
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image
@@ -115,12 +115,12 @@ useEffect(() => {
      </div> 
 
       <div className={`${styles.container} ${styles.white}`}>
-      <h1>{t('work-title')}</h1>
-     <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}><IconsWork /></AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h1>{t('work-title')}</h1></AnimationOnScroll>
+     <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}><IconsWork /></AnimationOnScroll>
 
 <div className={`${styles.callback__wrap}`}>
-     <h3>{t('about5')}</h3>
-      <p>{t('about3')}</p>
+     <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h3>{t('about5')}</h3></AnimationOnScroll>
+     <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}> <p>{t('about3')}</p></AnimationOnScroll>
        <CallbackButton />
        </div>
      </div>

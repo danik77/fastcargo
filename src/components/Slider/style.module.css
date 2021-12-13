@@ -83,19 +83,31 @@
 }
 
 
+@media (max-width: 1600px) {
+  .slider__left {
+ 
+    margin-left: 100px;
+}
+
+
+  }
+
+
 @media (max-width: 768px) {
   .slider__right {
     display: none;
   }
 
-  .slider__left {
-     max-width: none;
-     margin-left: 0px; 
+    .slider__left {
+       max-width: none;
+       margin-left: 0px; 
+  }
+
+  .slider__info {
+    left: 30px;
+      width: calc(100% - 60px);
+  }
+
 }
 
-.slider__info {
-  left: 30px;
-    width: calc(100% - 60px);
-}
-
-}
+ 

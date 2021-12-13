@@ -48,12 +48,13 @@ const [nextGo, setNextGo] = useState(false)
     <>
     {nextGo &&
       <> 
-            <div style={{backgroundImage: 'url(/images/cargo1.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
+            <div style={{backgroundImage: 'url(/images/cargo2.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
             <div  className={styles.sliderStyle}></div>
    
     <div className={`${styles.container} ${styles.containerCentered}`}>
       <main className={styles.main}>
         <h2>{t('services-title')}</h2>
+        <p>{t('services-desc')}</p>
         <CallbackButton /> 
           </main>
     </div>

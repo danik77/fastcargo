@@ -1,24 +1,39 @@
 import Logo from '../Logo';
 import styles from '../../../styles/Styles.module.css' // переставити
 
+import ContactSocial from '../ContactPanel/ContactSocial'
+
+import ContactPhones from '../ContactPanel/ContactPhones'
+import { useTranslation } from 'next-i18next';
+
+
+
+ 
+
 const Footer = () => {
+
+	 const { t, i18n } = useTranslation('common');
+
+
 	return (
 		<div className={styles.footer}>
 			<div className={styles.container}>
 				<div className={styles.footer__inner}>
 					<div className="footer__1">
-			 			{/* <Logo style="footer" /> */}
+			 			 <Logo style="footer" /> 
 						<h3>FastCargo © 2021</h3>
 					</div>
-				{/*
+				
 					<div className="footer__2">
-						<h3>Соцмережі</h3>
-						<p>facebook</p>
+
+						<ContactPhones style="footer" />
+						<ContactSocial />
 					</div>
+						{/*
 					<div className="footer__3">
-						<h3>Email</h3>
-						<p>ADMIN@FASTCARGO.COM.UA</p>
+						<ContactSocial />
 					</div>
+				
 					<div className="footer__4">
 						<h3>Адреса</h3>
 						<p>ОФІС В УКРАЇНІ</p>
@@ -33,3 +48,4 @@ const Footer = () => {
 }
 
 export default Footer;
+//				{/* <h3>{t('contacts-title')}</h3> */}

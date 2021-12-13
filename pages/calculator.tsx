@@ -16,7 +16,7 @@ const CalculatorPage: NextPage = () => {
   
   return (
       <> 
-            <div  style={{backgroundImage: 'url(/images/cargo1.jpg)', backgroundSize: 'cover'}} className={`${styles.page} ${styles.pageText} ${styles.page100vh}`}>
+            <div  style={{backgroundImage: 'url(/images/cargo10.jpg)', backgroundSize: 'cover'}} className={`${styles.page} ${styles.pageText} ${styles.page100vh}`}>
             <div  className={styles.sliderStyle}></div>
     <div className={styles.container}>
       <main className={styles.main}>

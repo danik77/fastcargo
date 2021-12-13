@@ -74,6 +74,15 @@ const Slider = () => {
   			      height={600}
               layout="responsive"
   			    />
+ <Image
+              src="/images/cargo7.jpg"
+              alt="Picture of the author"
+              width={1200}
+              height={600}
+              layout="responsive"
+            />
+ 
+     
           </AliceCarousel>
 
             <div style={sliderStyle} className="slider-overlay"></div>

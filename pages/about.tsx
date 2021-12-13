@@ -75,7 +75,7 @@ const About: NextPage = () => {
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image
-              src="/images/cargo3.jpg"
+              src="/images/cargo8.jpg"
               alt="Picture of the author"
                  width={800}
               height={400}
