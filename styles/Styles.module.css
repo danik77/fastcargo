@@ -19,9 +19,11 @@
     margin-right:  10px;
 }
 
+ 
 .phones__item {
-    margin-right:  10px;
+    margin-left:  10px;
 }
+
 
 .phones__item:hover {
         color: #e5e5e5;

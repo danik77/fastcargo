@@ -10,6 +10,13 @@ const ContactPanel = () => {
 		<>
 		<div className={styles.contactPanel} style={{display: 'flex', marginRight: "200px"}}>
 			<div className={styles.phones} style={{display: 'flex', color: 'white', marginRight: '50px',  alignItems: "center"}}>
+            <Image
+              src="/images/icons/phone-white.png"
+              alt="Picture of the author"
+                 width={15}
+              height={15}
+              
+            />
 				<div className={styles.phones__item}><a href="tel:+380683334930">+380683334930</a></div>
 				<div className={styles.phones__item}><a href="tel:+380683334930">+380683334930</a></div>
 			</div>

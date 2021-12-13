@@ -97,8 +97,8 @@ useEffect(() => {
        <div className={`${styles.container}`}>
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
-          <h3>{t('about4')}</h3>
-          <p> {t('about5')} {t('about6')} {t('about7')}</p>
+<AnimationOnScroll animateIn="animate__slideInLeft" animateOnce={true}><h3>{t('about4')}</h3></AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}><p> {t('about5')} {t('about6')} {t('about7')}</p></AnimationOnScroll>
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image

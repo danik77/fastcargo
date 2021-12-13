@@ -40,7 +40,7 @@ const About: NextPage = () => {
 
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
-          <p>{t('about4')} {t('about5')} {t('about6')} {t('about7')}</p>
+          <p>{t('about4')} {t('about5')}  </p>
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image
@@ -65,13 +65,13 @@ const About: NextPage = () => {
             />
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__text}`}>
-          <p>{t('about8')}</p>
+          <p>{t('about6')} {t('about7')}</p>
         </div>
       </div>
 
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
-          <p>{t('about4')} {t('about5')} {t('about6')} {t('about7')}</p>
+          <p>{t('about8')} </p>
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image
