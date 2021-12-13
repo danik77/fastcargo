@@ -11,7 +11,8 @@ const Logo = (props: any) => {
               alt="Picture of the author"
                  width={200}
               height={138}
-       
+       loading="eager"
+       priority={true}
                
             />
     		{/* <a style={{color: 'darkgreen', fontWeight: "bold", textTransform: 'uppercase', fontSize: '20px' }}>Fast Cargo</a> */}
