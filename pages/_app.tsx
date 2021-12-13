@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div>  {/*style={{ maxHeight: '100vh', overflow: 'hidden'}}*/} 
         <Header />
           <Component {...pageProps} />
-          <Footer /> 
+    
         <Navigation />
       </div>
       </div> 

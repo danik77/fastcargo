@@ -13,14 +13,16 @@ const CallbackForm = (props: any) => {
 
 	   const { t } = useTranslation('forms');
 
-	const [formData, setFormData] = useState(INITIAL_STATE)
+	const [formData, setFormData] = useState(INITIAL_STATE);
+	const [sent, setSent] = useState(false);
 
 	const submitForm = (e: any) => {
 		e.preventDefault();
 		console.log(formData)
 		props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		alert("Send")
+		//setSent(true);
+	//	alert("Send")
 	}
 
 	const handleChange = (e: any) => {
@@ -31,23 +33,31 @@ const CallbackForm = (props: any) => {
 	return (
 		<div className={props.className}>
 			<form className={style.contact__form} onSubmit={submitForm}>
+
+					{ !sent && (
+						<>
 						<h3>{t('get-price')}</h3>
-				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')} />
-				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')} /> 
+				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name') } required={true}/>
+				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')} required={true} /> 
 				<input type="submit" className="btn" value={t('send')} />
 								<p>{t('data-used')}</p>
-			</form>
+								</>
+								)}
 
+
+					
 {/*
-
 			{ sent && (
 				<div>
 					<h3>Message Sent!</h3>
 					<br />
-					<button className="btn btn-yellow"  onClick={closeForm}>Ok</button>
+					{ props.closeForm && <button className="btn btn-yellow"  onClick={() => props.closeForm()}>Ok</button> }
 				</div>
 			)}
-		*/}
+		 **/}
+			</form>
+
+ 
 		</div>
 	);
 }

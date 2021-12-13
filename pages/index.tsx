@@ -19,10 +19,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'; //
 import Slider from '../src/components/Slider';
 import IconsMain from '../src/components/IconsMain'; 
 import IconsContacts from '../src/components/IconsContacts'; 
+import IconsWork from '../src/components/IconsWork'; 
 import CallbackButton from '../src/components/CallbackForm/CallbackButton';
 
 
  import { AnimationOnScroll } from 'react-animation-on-scroll';
+
+ import Footer from '../src/components/Footer';
 
 
 
@@ -54,28 +57,41 @@ useEffect(() => {
   
 
   return (
-    <>
+    <div className={styles.homepage}>
     { nextGo && 
       <>
         <div className={styles.pageSlider}>
 
-
+       
       <Slider />
-      <div className={styles.container}>
+
+      <div className={`${styles.container} ${styles.white}`}>
+      <h1>{t('benefits-title')}</h1>
         <IconsMain />  
       </div>
       <div className={styles.colored}>
-        <div className={styles.container}>
+        <div className={styles.container} style={{padding: "20px 0px", fontSize: "18px", maxWidth: "900px"}}>
           <div className={styles.callback__wrap}>
             {/* <AnimationOnScroll animateIn="animate__bounceIn"> <div>d</div></AnimationOnScroll> */}
+            <h3>{t('about1')}</h3>
+            <p>{t('about2')}</p>
 <CallbackButton />
           </div>  
         </div>
       </div>
-      <div className={styles.container}>
-       <IconsContacts /> 
-       
+
+
+      {/* <div style={ backgroundImage: 'url(/images/cargo1.jpg)' className={`${styles.page}   ${styles.background}`}}> */}
+      <div className={`${styles.container} ${styles.white}`}>
+<h1>{t('contacts-title')}</h1>
+      <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+
+
+           <IconsContacts /> 
+       </AnimationOnScroll>
       </div>
+     
+      {/* </div> */}
 
  <div className={styles.colored}>
        <div className={`${styles.container}`}>
@@ -86,7 +102,7 @@ useEffect(() => {
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
           <Image
-              src="/images/cargo1.jpg"
+              src="/images/cargo2.jpg"
               alt="Picture of the author"
                  width={800}
               height={400}
@@ -98,9 +114,15 @@ useEffect(() => {
     </div>
      </div> 
 
+      <div className={`${styles.container} ${styles.white}`}>
+      <h1>{t('work-title')}</h1>
+     <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}><IconsWork /></AnimationOnScroll>
 
-     <div className={`${styles.container} ${styles.main}`}>
-          <CallbackButton />
+<div className={`${styles.callback__wrap}`}>
+     <h3>{t('about5')}</h3>
+      <p>{t('about3')}</p>
+       <CallbackButton />
+       </div>
      </div>
      
  
@@ -128,10 +150,10 @@ useEffect(() => {
 */}
    
       </div>
-
+ <Footer /> 
          </>
     }
-      </>
+      </div>
 
   )
 }

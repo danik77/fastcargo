@@ -20,15 +20,15 @@ const About: NextPage = () => {
 
   return (
     <div> 
-            <div style={{backgroundImage: 'url(/images/cargo1.jpg)', backgroundSize: 'cover'}} className={`${styles.page} ${styles.pageText}`}>
+            <div style={{backgroundImage: 'url(/images/cargo1.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
 <div  className={styles.sliderStyle}></div>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.containerCentered}`}>
       <main className={styles.main}>
         <h1>{t('about-title')}</h1>
     
       
-     <p>{t('about1')} {t('about2')} {t('about3')}</p>
-      <p>{t('about4')}</p>
+     <p>{t('about1')} {t('about2')} </p>
+    
        
         <CallbackButton />
 

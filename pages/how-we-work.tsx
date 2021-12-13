@@ -16,7 +16,7 @@ const HowWeWork: NextPage = () => {
   return (
      <><div  className={styles.sliderStyle}></div>
             <div  style={{backgroundImage: 'url(/images/cargo1.jpg)', backgroundSize: 'cover'}} className={`${styles.page} ${styles.page100vh}`}>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.containerCentered}`}>
 
       <main className={styles.main}>
         <h2>{t('work-title')}</h2>

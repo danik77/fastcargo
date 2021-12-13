@@ -1,6 +1,7 @@
 
 
 .contactsIcons {
+  margin-top: 40px;
     display: flex;
   justify-content: space-between;
       margin-bottom: 60px;
@@ -55,3 +56,6 @@
   line-height: 1.2;
 }
 
+.contactsIcons__item:not(:last-child) {
+    margin-right: 70px;
+    }

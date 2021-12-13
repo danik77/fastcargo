@@ -19,7 +19,7 @@ const ContactForm = (props: any) => {
 		console.log(formData)
 		props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		alert("Send")
+		//alert("Send")
 	}
 
 	const handleChange = (e: any) => {
@@ -29,11 +29,12 @@ const ContactForm = (props: any) => {
 
 	return (
 		<div className={props.className}>
+		 
 			<form className={style.contact__form} onSubmit={submitForm}>
-
-				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')} />
-				<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')} />
-				<textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('message')} />
+	<h3>{t('contact-us')}</h3>
+				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')} required={true} />
+				<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')} required={true} />
+				<textarea name="message" value={formData.message} onChange={handleChange} placeholder={t('message')} required={true} />
 				<input type="submit" className="btn" value={t('send')} />
  
 			</form>

@@ -17,6 +17,13 @@
   top: 50px;
 }
 
+
+.calc__form h3, .calc__form p, .calc__form label  {
+  color:black;
+
+}
+
+
 .calc__form {
 display: flex;
     flex-direction: column;
@@ -38,6 +45,8 @@ display: flex;
 }
 
 .calc__form label {
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 5px;
+  text-shadow: none;
+  font-size:16px;
  }

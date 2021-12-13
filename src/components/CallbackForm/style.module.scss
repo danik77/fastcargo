@@ -17,6 +17,10 @@
   top: 50px;
 }
 
+ .contact__form h3, .contact__form p, .contact__form label  {
+  color:black;
+}
+
 
 .contact__form {
 display: flex;
@@ -51,6 +55,9 @@ margin-bottom: 7px;
     height: 100px;
  }
 
+.contact__form label {
+  text-shadow: none;
+}
 
 .chatButton {
   cursor:pointer;

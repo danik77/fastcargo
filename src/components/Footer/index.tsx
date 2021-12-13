@@ -1,3 +1,4 @@
+import Logo from '../Logo';
 import styles from '../../../styles/Styles.module.css' // переставити
 
 const Footer = () => {
@@ -6,9 +7,10 @@ const Footer = () => {
 			<div className={styles.container}>
 				<div className={styles.footer__inner}>
 					<div className="footer__1">
-						<h3>Телефон</h3>
-						<p>+380683334930</p>
+			 			{/* <Logo style="footer" /> */}
+						<h3>FastCargo © 2021</h3>
 					</div>
+				{/*
 					<div className="footer__2">
 						<h3>Соцмережі</h3>
 						<p>facebook</p>
@@ -23,7 +25,7 @@ const Footer = () => {
 					<p>М. ЛЬВІВ, ВУЛ. ПІД ГОЛОСКОМ 4-Б</p>
 					<p>ОФІС В ПОЛЬЩІ</p>
 					<p>37-700 PRZEMYŚL</p>
-					</div>
+					</div>*/}
 				</div>
 			</div>
 		</div>

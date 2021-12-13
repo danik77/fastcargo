@@ -32,7 +32,7 @@ const CalculatorForm = (props: any) => {
 		console.log(formData)
 		props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		alert("Send")
+		//alert("Send")
 	}
 
 	const handleChange = (e: any) => {

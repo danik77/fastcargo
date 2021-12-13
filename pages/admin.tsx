@@ -22,6 +22,8 @@ const AdminPage: NextPage = () => {
         <h2>Admin page</h2>
         {/* <Admin /> */}
 
+      
+
         <div>
           <h3>Slider</h3>
         </div>

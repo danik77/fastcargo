@@ -109,10 +109,18 @@ p {
     border-radius: 23px;
 }
 
+.btn:hover {
+    background: linear-gradient(284.89deg, #bebf2f 40.15%, #f2ff00 178.17%);
+}
+
 .btn-wide {
   padding: 15px 35px;
 }
 /* preloader */
+
+.btn-page {
+      margin-top: 30px;
+}
 
 .lds-dual-ring {
   padding-top: 25px;

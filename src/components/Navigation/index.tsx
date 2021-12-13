@@ -1,5 +1,10 @@
 import Link from 'next/link'
-import styles from '../../../styles/Styles.module.css'
+import styles from './style.module.css'
+
+
+  
+
+
 import Image from 'next/image';
 
 import { useTranslation } from 'next-i18next';

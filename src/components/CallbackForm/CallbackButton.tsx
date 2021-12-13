@@ -21,7 +21,7 @@ const CallbackButton = () => {
 
 	return(
 		<>
-		<button className="btn btn-wide" onClick={onClickHandler}>{t('get-calc')}</button>
+		<button className="btn btn-wide btn-page" onClick={onClickHandler}>{t('get-calc')}</button>
 			{showForm && <CallbackPopup closeForm={closeForm} />}
 		</>
 	);

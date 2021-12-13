@@ -1,6 +1,29 @@
 .social {
     display: flex;
-    background: linear-gradient(284.89deg, #cecf12 40.15%, #f2ff00 178.17%);
+    /*background: linear-gradient(284.89deg, #cecf12 40.15%, #f2ff00 178.17%);*/
     border-radius: 20px;
     padding: 9px 7px 5px 12px;
 }
+
+.social__item {
+        background: #d9dd0d;
+   
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.social__item a {
+    padding: 8px 8px 5px;
+}
+
+.social__item:not(:last-child) {
+    margin-right:10px
+}
+
+.social__item:hover {
+     background: #aba900;
+ }

@@ -18,6 +18,14 @@ width: 40px;
 }
 
 .lang__active {
-      background: #ede61c;
+      background: #d8dc0e;
       color:black;
+}
+
+.lang__item:hover {
+ background: #0000002e;
+}
+
+.lang__active:hover {
+  background:#aba900;
 }
