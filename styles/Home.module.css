@@ -115,6 +115,13 @@ position: relative;
   height: 100vh;
 }
 
+
+/*
+.Home_page100vh__1Mcdu {
+    height: auto;
+}
+*/
+
 .pageText {
   color: white;
  
@@ -299,6 +306,13 @@ position: relative;
 
 .homepage .white .container {
   margin-bottom: 90px;
+}
+
+
+
+  .calculator {
+  height: auto;
+
 }
 
 @media (max-width: 600px) {
