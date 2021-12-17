@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import style from './style.module.scss';
 
-const ContactButton = () => {
+const ContactButton = (props:any) => {
 
 	const [showForm, setShowForm] = useState(false);
 
@@ -17,7 +17,7 @@ const ContactButton = () => {
 	}
 
 	return(
-		<div className={style.contactPopupButton}>
+		<div className={`${style.contactPopupButton}`}>
 	   <Image
           src="/images/icons/chat.png"
           alt="chat"

@@ -31,6 +31,17 @@ const { t } = useTranslation('icons');
                   <p>{t('without-agents')}</p>
                 </div>
 
+                 <div className={style.mainIcons__item}>
+                  <Image
+                    src="/images/icons/fast-delivery.png"
+                    alt="Picture of the author"
+                    width={60}
+                    height={60}
+                    loading="eager"
+                  />
+                  <p>{t('express')}</p>
+                </div>
+
                 <div className={style.mainIcons__item}>
                   <Image
                     src="/images/icons/express-delivery.png"
@@ -39,7 +50,7 @@ const { t } = useTranslation('icons');
                     height={60}
                     loading="eager"
                   />
-                  <p>{t('more-33cars')}</p>
+                  <p>{t('diff-cars')}</p>
                 </div>
 
                 <div className={style.mainIcons__item}>

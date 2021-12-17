@@ -21,6 +21,23 @@ const INITIAL_STATE = {
 	email: ""
 }
 
+ 
+
+const CARGO_TYPES = [
+"autoparts",
+"electrical",
+"phones-computers",
+"clothing",
+"textiles",
+"equipment",
+"food-group",
+"alcohol",
+"tobacco",
+"households",
+"cosmethicts",
+"other"
+]
+
 const CalculatorForm = (props: any) => {
 
 	   const { t } = useTranslation('forms');
@@ -46,6 +63,12 @@ const CalculatorForm = (props: any) => {
 		 <h3>{t('calc-cargo-value')}</h3>
 		 
 				<input type="text" name="type" value={formData.type} onChange={handleChange} placeholder={t('cargo-type')}/>
+				<select name="type" >
+				<option value={0}>== {t('select-option')} ==</option>
+					{CARGO_TYPES.map(i => (
+						<option value={t(i)}>{t(i)}</option>
+					))}
+				</select>
 				<label>{t('cargo-attrs')}</label>
 				<input type="text" name="cost" value={formData.cost} onChange={handleChange} placeholder={t('price')}/>
  				<input type="text" name="weight" value={formData.weight} onChange={handleChange} placeholder={t('weight')}/>

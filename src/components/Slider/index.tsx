@@ -92,7 +92,7 @@ const Slider = () => {
           <div className={style.slider__info}>
             <div className={style.slider__left}>
               <h2>{t('slider-title')}</h2>
-              <p>{t('slider-desc')}</p>
+              {/* <p>{t('slider-desc')}</p> */}
       
             </div>
             <div className={style.slider__right}>

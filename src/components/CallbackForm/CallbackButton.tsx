@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 
 import style from './style.module.scss';
 
-const CallbackButton = () => {
+const CallbackButton = (props:any) => {
 
 	 const { t } = useTranslation('forms');
 
@@ -21,7 +21,7 @@ const CallbackButton = () => {
 
 	return(
 		<>
-		<button className="btn btn-wide btn-page" onClick={onClickHandler}>{t('get-calc')}</button>
+		<button className={`btn btn-wide btn-page ${props.className && props.className}`} onClick={onClickHandler}>{t('get-calc')}</button>
 			{showForm && <CallbackPopup closeForm={closeForm} />}
 		</>
 	);

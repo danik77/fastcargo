@@ -53,8 +53,9 @@
  
 
 .colored {
-  background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);
+   /*background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);*/
   /* margin:  120px 0px; */
+      background: linear-gradient(284.89deg, #bebf2f 40.15%, #f2ff00 178.17%);
 }
 
 .white {

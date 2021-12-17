@@ -12,12 +12,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);
-    width: 160px;
-    height: 160px;
+   /* background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);*/
+        background: linear-gradient(284.89deg, #bebf2f 40.15%, #f2ff00 178.17%);
+   width: 180px;
+    height: 180px;
     font-size: 12px;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 25px 25px;
+    border-radius: 90px;
     box-shadow: 0 4px 4px RGB(0 0 0/25%);
     text-transform: uppercase;
     font-weight: bold;

@@ -122,6 +122,16 @@ p {
       margin-top: 30px;
 }
 
+
+.btn-black {
+background: black;
+color: white;
+}
+
+.btn-black:hover {
+      background: #2e2e2e;
+}
+
 .lds-dual-ring {
   padding-top: 25px;
   margin: auto;

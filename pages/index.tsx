@@ -75,7 +75,7 @@ useEffect(() => {
             {/* <AnimationOnScroll animateIn="animate__bounceIn"> <div>d</div></AnimationOnScroll> */}
            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}> <h3>{t('about1')}</h3></AnimationOnScroll>
            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}> <p>{t('about2')}</p></AnimationOnScroll>
-<CallbackButton />
+<CallbackButton className="btn-black"/>
           </div>  
         </div>
       </div>

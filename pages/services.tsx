@@ -63,7 +63,7 @@ const [nextGo, setNextGo] = useState(false)
 
 
 
-  <div className={`${styles.container} ${styles.infopage}`} style={{background: "linear-gradient(284.89deg, #547608 40.15%, #7fd300 178.17%)"}}>
+  <div className={`${styles.container} ${styles.infopage}`} style={{background: "linear-gradient(284.89deg, #bebf2f 40.15%, #f2ff00 178.17%)"}}>
 {/*ВИНЕСТИ В ФУНКЦІЮ ! */}
 
   {new Array(13).fill(0).map((item, i) => (

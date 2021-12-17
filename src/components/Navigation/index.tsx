@@ -26,9 +26,6 @@ const Navigation = () => {
 			<Link href="/about">
     		<a>{t('about')}</a>
   		</Link>
-  		<Link href="/contacts">
-    		<a>{t('contacts')}</a>
-  		</Link>
   		<Link href="/services">
     		<a>{t('services')}</a>
   		</Link>
@@ -40,6 +37,9 @@ const Navigation = () => {
   		</Link>
   		<Link href="/information">
     		<a>{t('information')}</a>
+  		</Link>
+  		<Link href="/contacts">
+    		<a>{t('contacts')}</a>
   		</Link>
   		</div>
 

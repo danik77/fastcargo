@@ -20,6 +20,8 @@ const CalculatorPage: NextPage = () => {
             <div  className={styles.sliderStyle}></div>
     <div className={styles.container}>
       <main className={styles.main}>
+      <h2>{t('calc-title')}</h2>
+      <p>{t('calc-desc')}</p>
         <Calculator />
       </main>
     </div>
