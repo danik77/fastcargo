@@ -48,9 +48,9 @@ const ContactSocial = () => {
                 	<div className={localStyle.social__item}>
 	                	 
 
-	                 <a href='https://youtube.com'>
+	                 <a href='https://whatsapp.com'>
                   <Image
-                    src="/images/icons/youtube3.png"
+                    src="/images/icons/whatsapp.png"
                     alt="youtube"
                     width={30}
                     height={30}

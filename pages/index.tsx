@@ -119,7 +119,7 @@ useEffect(() => {
      <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}><IconsWork /></AnimationOnScroll>
 
 <div className={`${styles.callback__wrap}`}>
-     <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h3>{t('about5')}</h3></AnimationOnScroll>
+     <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><h3>{t('about9')}</h3></AnimationOnScroll>
      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}> <p>{t('about3')}</p></AnimationOnScroll>
        <CallbackButton />
        </div>

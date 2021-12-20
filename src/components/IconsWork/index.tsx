@@ -11,7 +11,7 @@ const { t } = useTranslation('icons');
  <div className={styles.workIcons}>
                 <div className={styles.workIcons__item}>
                   <Image
-                    src="/images/icons/box.png"
+                    src="/images/icons/mail.png"
                     alt="Picture of the author"
                     width={60}
                     height={60}

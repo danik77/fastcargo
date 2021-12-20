@@ -27,7 +27,7 @@ const About: NextPage = () => {
         <h1>{t('about-title')}</h1>
     
       
-     <p>{t('about1')} {t('about2')} </p>
+     {/* <p>{t('about1')} {t('about2')} </p> */}
     
        
         <CallbackButton />
@@ -37,6 +37,41 @@ const About: NextPage = () => {
     </div>
     </div>
     <div className={`${styles.container} ${styles.infopage}`}>
+
+<div className={styles.infopage__item}>
+
+<div className={`${styles.infopage__center} ${styles.infopage__text}`}>
+ <p>{t('about4')} {t('about5')} {t('about6')} {t('about7')} </p>
+     <p>{t('about1')} {t('about2')} </p>
+     <p>{t('about3')}   </p>
+      <p>{t('about8')}   </p>
+      </div>
+
+      </div>
+      <div className={styles.infopage__item}>
+            <div className={`${styles.infopage__left} ${styles.infopage__image}`}>
+             <Image
+              src="/images/cargo2.jpg"
+              alt="Picture of the author"
+                 width={800}
+              height={400}
+              layout="responsive"
+              className={styles.infopage__image}
+              />
+            </div>
+            <div className={`${styles.infopage__right} ${styles.infopage__image}`}>
+             <Image
+              src="/images/cargo1.jpg"
+              alt="Picture of the author"
+                 width={800}
+              height={400}
+              layout="responsive"
+              className={styles.infopage__image}
+            />
+            </div>
+</div>
+ 
+ {/*
 
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
@@ -84,7 +119,7 @@ const About: NextPage = () => {
             />
         </div>
       </div>
-     
+     */}
     </div>
     </div>
   )

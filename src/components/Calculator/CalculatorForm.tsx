@@ -62,9 +62,9 @@ const CalculatorForm = (props: any) => {
 		 <form className={style.calc__form} onSubmit={submitForm} style={{maxWidth: '300px'}}>
 		 <h3>{t('calc-cargo-value')}</h3>
 		 
-				<input type="text" name="type" value={formData.type} onChange={handleChange} placeholder={t('cargo-type')}/>
-				<select name="type" >
-				<option value={0}>== {t('select-option')} ==</option>
+				 
+				<select name="type"  onChange={handleChange} value={formData.type}>
+				<option value={0}>{t('select-option')}</option>
 					{CARGO_TYPES.map(i => (
 						<option value={t(i)}>{t(i)}</option>
 					))}
@@ -75,6 +75,7 @@ const CalculatorForm = (props: any) => {
  				<input type="text" name="volume" value={formData.volume} onChange={handleChange} placeholder={t('volume')}/>
  				<label>{t('papers')}</label>
  				<input type="text" name="paper" value={formData.paper} onChange={handleChange} placeholder={t('set-doc-type')}/>
+ 				<label>{t('contacts')}</label>
  				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')}/>
  				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')}/>
  				<input type="text" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')}/>

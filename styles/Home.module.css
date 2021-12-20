@@ -2,9 +2,13 @@
  box-shadow: 0 4px 20px RGB(0 0 0/25%);
 }
 
+.infopage__center {
+  
+}
+
 .infopage__item {
       display: flex;
-      height: 300px;
+      /*height: 300px;*/
 }
 
 .infopage__left {
@@ -42,8 +46,8 @@
 
 
 
-.infopage__text {
-   padding: 30px 20px 55px;
+.infopage__text {    text-align: justify;
+   padding: 30px 80px 55px;
     background: transparent;
     /*text-shadow: 0 4px 4px RGB(0 0 0/25%);     */
      font-size: 18px;
