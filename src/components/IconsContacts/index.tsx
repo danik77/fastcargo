@@ -22,8 +22,8 @@ const { t, i18n } = useTranslation('icons');
             </div>
             <div  className={styles.contactsIcons__text}>
               <p>Телефон </p>
-              <p>+38 067 1111111   </p> 
-             <p>+48 16 678 0870</p>  
+              <p>+38 073 7330307 (ua)</p> 
+             <p>+48 698 995 689 (pl)</p>  
             </div>
              
           </div>
@@ -41,7 +41,7 @@ const { t, i18n } = useTranslation('icons');
               <p>{t('office-ukr')}</p>
               <p>{t('address-ukr')}</p> 
              <p>{t('office-pl')}</p>  
-             <p>37-700 Przemyśl</p>
+             <p>{t('address-pl')}</p>
             </div>
           </div>
           <div className={styles.contactsIcons__item}>
