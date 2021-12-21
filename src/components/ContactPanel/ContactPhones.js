@@ -18,8 +18,8 @@ const ContactPhones = (props) => {
               
             />
          }
-				<div className={styles.phones__item}><a href="tel:+380737330307">+380737330307 (ua)</a></div>
-				<div className={styles.phones__item}><a href="tel:+48698995689">+48698995689 (pl)</a></div>
+				<div className={styles.phones__item}><a href="tel:+380737330307">+380737330307</a></div>
+				{/* <div className={styles.phones__item}><a href="tel:+48698995689">+48698995689 (pl)</a></div> */}
 			</div>
 		);
 }

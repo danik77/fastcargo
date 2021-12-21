@@ -15,6 +15,7 @@ const INITIAL_STATE = {
 	cost: "",
 	weight: "",
 	volume: "",
+	addInfo: "",
 	paper: "",
 	name: "",
 	phone: "",
@@ -75,6 +76,8 @@ const CalculatorForm = (props: any) => {
  				<input type="text" name="volume" value={formData.volume} onChange={handleChange} placeholder={t('volume')}/>
  				<label>{t('papers')}</label>
  				<input type="text" name="paper" value={formData.paper} onChange={handleChange} placeholder={t('set-doc-type')}/>
+				<label>{t('add-info')}</label>
+				<input type="text" name="addInfo" value={formData.addInfo} onChange={handleChange} placeholder={t('add-info')}/>
  				<label>{t('contacts')}</label>
  				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')}/>
  				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')}/>
