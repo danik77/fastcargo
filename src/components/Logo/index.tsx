@@ -7,7 +7,7 @@ const Logo = (props: any) => {
 			<Link href="/">
 			<a>
 			<Image
-              src="/images/transp_log6556.png"
+              src="/images/transp_l55.png"
               alt="Picture of the author"
                  width={200}
               height={138}
