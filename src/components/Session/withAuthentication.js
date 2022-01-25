@@ -27,7 +27,9 @@ const withAuthentication = Component => {
 // ЩО ТУТ ---- onAuthUserListener
 
 
-    const [authUser, setAuthUser] = useState(JSON.parse(localStorage.getItem('authUser')))
+    const [authUser, setAuthUser] = useState(null)
+
+
     const [groupId, setGroupId] = useState(null)
 
     // const dispatch = useDispatch();/////////////////////
@@ -35,10 +37,14 @@ const withAuthentication = Component => {
 
      useEffect(() =>{
 
+       if(typeof window !== "undefined") {
+
+         setAuthUser(JSON.parse(localStorage.getItem('authUser')));
+
        const listener = props.firebase.onAuthUserListener(
         authUser => {
  
-          localStorage.setItem('authUser', JSON.stringify(authUser));
+           localStorage.setItem('authUser', JSON.stringify(authUser));
           //dispatch(getAuth(authUser))/////////////////
           setAuthUser(authUser)
         },
@@ -48,6 +54,7 @@ const withAuthentication = Component => {
                    setAuthUser(null)
         },
       );
+     }
 
 
        return () => {

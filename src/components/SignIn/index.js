@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { withRouter } from 'react-router-dom';
-import { compose } from 'recompose';
+//import { compose } from 'recompose';
 
 //import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
@@ -13,15 +13,15 @@ import * as CODES from '../../constants/codes';
 
 
 import { useRouter } from 'next/router'
-
+import {useState} from 'react'
 
 
 const SignIn = () => (
   <div>
     <h1>Вхід</h1>
     <SignInForm />
-    <SignInGoogle />
-    {/* <SignInFacebook /> */}
+    {/*<SignInGoogle />
+     <SignInFacebook /> */}
     <PasswordForgetLink />
     {/*SignUpLink />*/}
   </div>
@@ -45,7 +45,91 @@ const ERROR_MSG_ACCOUNT_EXISTS = `
   your personal account page.
 `;
 */
-class SignInFormBase extends Component {
+
+
+
+const SignInFormBase  = (props) => {
+  
+ const [state, setState] = useState({...INITIAL_STATE})
+  const router = useRouter()
+
+
+
+  const onSubmit = event => {
+
+  // const router = useRouter()
+
+
+    const { email, password, loading } = state;
+
+    setState({...state, loading:true});
+
+    props.firebase
+      .doSignInWithEmailAndPassword(email, password)
+      .then(() => {
+        router.push(ROUTES.ADMIN)
+        setState({ ...INITIAL_STATE });
+       // this.props.history.push(ROUTES.HOME);
+ 
+      })
+      .catch(error => {
+        setState({...state, error });
+        setState({...state, loading:false}); //////////////////////////!!!!!!!1
+        
+      });
+
+    event.preventDefault();
+  };
+
+
+  const onChange = event => {
+    setState({...state, [event.target.name]: event.target.value, error:null });
+  };
+
+
+  const { email, password, error, loading } = state;
+
+    const isInvalid = password === '' || email === '';
+
+ 
+
+  return (
+     <>
+      {!loading && (
+         <form onSubmit={onSubmit}>
+        <input
+          name="email"
+          value={email}
+          onChange={onChange}
+          type="text"
+          placeholder="Email"
+          required="required"
+        />
+        <input
+          name="password"
+          value={password}
+          onChange={onChange}
+          type="password"
+          placeholder="Пароль"
+          required="required"
+        />
+        <button disabled={isInvalid} type="submit">
+          Ввійти
+        </button>
+
+         {error && <p>{CODES.CODES[error.code] ? CODES.CODES[error.code] : error.message }</p>}
+
+        </form> 
+      )}
+     
+       {loading && <div className="lds-dual-ring"></div>}
+       </>
+  );
+}
+
+
+
+class SignInFormBase2 extends Component {
   constructor(props) {
     super(props);
 
@@ -56,7 +140,7 @@ class SignInFormBase extends Component {
 
   onSubmit = event => {
 
-   // const router = useRouter()
+  // const router = useRouter()
 
 
     const { email, password, loading } = this.state;
@@ -68,7 +152,7 @@ class SignInFormBase extends Component {
       .then(() => {
         this.setState({ ...INITIAL_STATE });
        // this.props.history.push(ROUTES.HOME);
-       //router.push(ROUTES.ADMIN)
+       router.push(ROUTES.ADMIN)
       })
       .catch(error => {
         this.setState({ error });
@@ -234,21 +318,17 @@ const SignInLink = () => (
 */
 
 
-const SignInForm = compose(
-  //withRouter,
-  withFirebase,
-)(SignInFormBase);
+const SignInForm =  withFirebase(SignInFormBase);
 
-const SignInGoogle = compose(
-  //withRouter,
-  withFirebase,
-)(SignInGoogleBase);
+const SignInGoogle = withFirebase(SignInGoogleBase);
 
+const SignInFacebook = withFirebase(SignInFacebookBase);
+/*
 const SignInFacebook = compose(
  // withRouter,
   withFirebase,
 )(SignInFacebookBase);
-
+*/
 
 export default SignIn;
 

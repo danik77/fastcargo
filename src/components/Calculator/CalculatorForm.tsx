@@ -4,7 +4,7 @@ import style from './style.module.scss';
 
 import { useTranslation } from 'next-i18next';
 
- 
+ import { sendMail } from '../../functions.js';
 
  
   
@@ -48,9 +48,15 @@ const CalculatorForm = (props: any) => {
 	const submitForm = (e: any) => {
 		e.preventDefault();
 		console.log(formData)
+
+		const subject = "Calculator";
+		sendMail(formData, subject);
+
+
+
 		props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		//alert("Send")
+		alert('Done'); //// TRANSLATE  if error
 	}
 
 	const handleChange = (e: any) => {
@@ -81,7 +87,7 @@ const CalculatorForm = (props: any) => {
  				<label>{t('contacts')}</label>
  				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')}/>
  				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')}/>
- 				<input type="text" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')}/>
+ 				<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')}/>
 
 				<input type="submit" className="btn" value={t('calc-value')} />
 			</form>

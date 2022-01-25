@@ -312,6 +312,13 @@ position: relative;
 .homepage .white .container {
   margin-bottom: 90px;
 }
+.services .infopage {
+      padding: 50px 0px;
+}
+
+.services .infopage__item {
+      padding: 30px 0px;
+}
 
 
 
@@ -324,5 +331,51 @@ position: relative;
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .container {    
+    margin-top: auto;
+  }
+
+  .main { 
+  text-align: center;
+   }
+
+  .page {
+    padding-top: 0px;
+  }
+
+  .page100vh {
+        height: auto;
+  }
+
+  .sliderStyle {
+    position: fixed;
+  }
+
+  .infopage__item  {
+    
+    flex-direction: column;
+  }
+
+  .infopage__label {
+    order: 2;
+  }
+
+  .homepage .infopage__left, .homepage .infopage__right, .infopage__right, .infopage__left {
+        width: 100%;
+  }
+
+  .infopage__text, .homepage .infopage__text {
+        padding: 20px;
+  }
+
+  .callback__wrap {
+    padding: 20px;
   }
 }

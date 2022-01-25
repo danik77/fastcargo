@@ -10,10 +10,10 @@ import ContactSocial from './ContactSocial'
 import ContactPhones from './ContactPhones'
 
 
-const ContactPanel = () => {
+const ContactPanel = (props) => {
 	return (
 		<>
-		<div className={styles.contactPanel} style={{display: 'flex', marginRight: "200px"}}>
+		<div className={localStyle.contactPanel}  >
 			 
 <ContactPhones />
 					 <ContactSocial />

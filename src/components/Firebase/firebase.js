@@ -1,8 +1,23 @@
-import app from 'firebase/compat/app';
+/*import app from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import "firebase/compat/storage";
 
+*/
+
+
+/*
+import app from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+//import firebase from 'firebase';
+*/
+
+
+
+
+
+/*
 
 const config = {
   apiKey: "AIzaSyCVga2tp8jiFBEoWLUoIdCxRq9sPybRuCg",
@@ -13,6 +28,39 @@ const config = {
   appId: "1:553535020323:web:2856e21c5d772c0f324096"
 };
 
+
+const config = {
+    apiKey: "AIzaSyA8wvmlI81KxfEa5M3pfezyhi2HJfDMNPc",
+  authDomain: "remont-27693.firebaseapp.com",
+  databaseURL: "https://remont-27693-default-rtdb.firebaseio.com",
+  projectId: "remont-27693",
+  storageBucket: "remont-27693.appspot.com",
+  messagingSenderId: "984965484843",
+}
+*/
+
+
+import app from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/database';
+import "firebase/compat/storage";
+
+
+
+const config = {
+ apiKey: "AIzaSyCVga2tp8jiFBEoWLUoIdCxRq9sPybRuCg",
+  authDomain: "fastcargo-6b405.firebaseapp.com",
+  databaseURL: "https://fastcargo-6b405-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "fastcargo-6b405",
+  storageBucket: "fastcargo-6b405.appspot.com",
+  messagingSenderId: "553535020323",
+  appId: "1:553535020323:web:2856e21c5d772c0f324096"
+};
+
+
+
+
+ 
 class Firebase {
   constructor() {
     app.initializeApp(config);

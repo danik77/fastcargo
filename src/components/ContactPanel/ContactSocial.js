@@ -2,12 +2,15 @@ import styles from '../../../styles/Styles.module.css' // переставити
 import Image from 'next/image'
 import localStyle from './style.module.scss'; 
 
+import {DataContext} from '../../../pages/_app'
 
 const ContactSocial = () => {
 	return (
+     <DataContext.Consumer>
+   { data => 
 		<div className={localStyle.social}  >
 								<div className={localStyle.social__item}>
-									<a href='https://facebook.com'>
+									<a href={data?.socialFacebook}>
                   <Image
                     src="/images/icons/facebook.png"
                     alt="facebook"
@@ -20,7 +23,7 @@ const ContactSocial = () => {
                 </div>
 
                 	<div className={localStyle.social__item}>
-                	<a href='https://instagram.com'>
+                	<a href={data?.socialInstagram}>
                   <Image
                     src="/images/icons/instagram.png"
                     alt="instagram"
@@ -33,7 +36,7 @@ const ContactSocial = () => {
                 </div>
 
                 	<div className={localStyle.social__item}>
-                   <a href='https://telegram.com'>
+                   <a href={data?.socialTelegram}>
                       <Image
                         src="/images/icons/telegram.png"
                         alt="telegram"
@@ -48,7 +51,7 @@ const ContactSocial = () => {
                 	<div className={localStyle.social__item}>
 	                	 
 
-	                 <a href='https://whatsapp.com'>
+	                 <a href={data?.socialWhatsapp}>
                   <Image
                     src="/images/icons/whatsapp.png"
                     alt="youtube"
@@ -60,6 +63,8 @@ const ContactSocial = () => {
                    </a>
                 </div>
                 </div>
+              }
+             </DataContext.Consumer> 
 		);
 }
 

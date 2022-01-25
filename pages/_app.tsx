@@ -11,7 +11,7 @@ import Navigation from '../src/components/Navigation';
 
 import styles from '../styles/Styles.module.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
  
@@ -20,14 +20,28 @@ import LoadContext from '../src/components/context.js';
   
 const LangContext = React.createContext(null);
 
-const firebase = new Firebase();
+export const DataContext = React.createContext(null);
+
+export const firebase = new Firebase();
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   const [load,setLoad] = useState(false);
+  const [data, setData] = useState(null)
 
   console.log(load)
 
+
+useEffect(() => {
+  firebase.db.ref('data').on('value', snapshot => {
+        setData(snapshot.val());
+        setLoad(true);
+
+      
+      });
+}, [])
 
    
   return (
@@ -41,22 +55,26 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     </Head>
     <>
-     {/* <LoadContext.Provider value={{load: load, setLoad: setLoad}} > 
+     {/* <LoadContext.Provider value={{load: load, setLoad: setLoad}} > */}
       <FirebaseContext.Provider value={firebase}> 
-      <>
-      <div className="lds-dual-ring" style={load ? {display: "none"} : {display: "block"}}></div> */} 
-      <div> {/*style={  {/*  load ? {visibility: "visible"} : {visibility: "hidden"} }*/}
+      <DataContext.Provider value={data}>
+
+      
+       
+      <div className="lds-dual-ring" style={load ? {display: "none"} : {display: "block"}}></div> 
+      <div style={ load ? {visibility: "visible"} : {visibility: "hidden"} } >
       <div>  {/*style={{ maxHeight: '100vh', overflow: 'hidden'}}*/} 
         <Header />
+        <Navigation />
           <Component {...pageProps} />
     
-        <Navigation />
+         
       </div>
       </div> 
     
-    {/*
+     </DataContext.Provider>
       </FirebaseContext.Provider>
-         </LoadContext.Provider>*/}
+         {/* </LoadContext.Provider>*/}
          </>
       </>
     )

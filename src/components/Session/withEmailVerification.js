@@ -27,12 +27,25 @@ const withEmailVerification = Component => {
         .then(() => this.setState({ isSent: true }));
     };
 
+
+
+
     render() {
       return (
+        <>
+      
         <AuthUserContext.Consumer>
+   
           {context =>
-            needsEmailVerification(context.authUser) ? (
+            <>
+ 
+{
+
+   
+
+            needsEmailVerification(context?.authUser) ? (
               <div>
+                
                 {this.state.isSent ? (
                   <p>{CODES.MESSAGES.EMAIL_SENT}</p>
                 ) : (
@@ -48,10 +61,17 @@ const withEmailVerification = Component => {
                 </button>
               </div>
             ) : (
+            <> 
               <Component {...this.props} />
+              </>
             )
+}
+            </>
+ 
           }
         </AuthUserContext.Consumer>
+    
+        </>
       );
     }
   }

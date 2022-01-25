@@ -1,7 +1,7 @@
  import Image from 'next/image';
 import styles from './style.module.css';
 import { useTranslation } from 'next-i18next';
-
+ import {DataContext} from '../../../pages/_app'
  const IconsContacts = () => {
 
 const { t, i18n } = useTranslation('icons');
@@ -9,6 +9,9 @@ const { t, i18n } = useTranslation('icons');
 
  
    return (
+
+        <DataContext.Consumer>
+   { data => 
 <div className={styles.contactsIcons} >
           <div className={styles.contactsIcons__item}>
           <div>
@@ -22,8 +25,10 @@ const { t, i18n } = useTranslation('icons');
             </div>
             <div  className={styles.contactsIcons__text}>
               <p>Телефон </p>
+              <p>{data?.phone1}</p>
+            {/*
               <p>+38 073 7330307 (ua)</p> 
-             <p>+48 698 995 689 (pl)</p>  
+             <p>+48 698 995 689 (pl)</p>  */}
             </div>
              
           </div>
@@ -39,9 +44,11 @@ const { t, i18n } = useTranslation('icons');
             </div>
                <div  className={styles.contactsIcons__text}>
               <p>{t('office-ukr')}</p>
-              <p>{t('address-ukr')}</p> 
-             <p>{t('office-pl')}</p>  
-             <p>{t('address-pl')}</p>
+              <p>{data?.addressUkr}</p>
+              {/*<p>{t('address-ukr')}</p> */}
+             <p>{t('office-pl')}</p> 
+             <p>{data?.addressPl}</p> 
+             {/* <p>{t('address-pl')}</p>*/}
             </div>
           </div>
           <div className={styles.contactsIcons__item}>
@@ -57,11 +64,13 @@ const { t, i18n } = useTranslation('icons');
             </div>           
             <div className={styles.contactsIcons__text}>
               <p>E-mail </p>
-              <p>admin@fastcargo.com.ua</p> 
+             <p>{data?.email}</p>
  
             </div>
           </div>
         </div>
+      }
+      </DataContext.Consumer>
  
      );
  }

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import style from './style.module.scss';
 import { useTranslation } from 'next-i18next';
 
+import { sendMail } from '../../functions.js';
+
 const INITIAL_STATE = {
 	name: "",
 	email: "",
@@ -17,9 +19,16 @@ const ContactForm = (props: any) => {
 	const submitForm = (e: any) => {
 		e.preventDefault();
 		console.log(formData)
+
+		const subject = "Message from site";
+		sendMail(formData, subject);
+
+
+
 		props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		//alert("Send")
+		alert('Done');///////////////////// TRANSLATE ! if error
+		//setSent(true); !!!!!!!!!!!!!!!!!!!!!!!!!!!11 
 	}
 
 	const handleChange = (e: any) => {

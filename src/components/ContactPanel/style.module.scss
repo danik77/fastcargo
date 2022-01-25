@@ -1,3 +1,10 @@
+
+.contactPanel {
+  display: flex;
+  margin-right: 200px;
+}
+
+
 .social {
     display: flex;
     /*background: linear-gradient(284.89deg, #cecf12 40.15%, #f2ff00 178.17%);*/
@@ -32,4 +39,20 @@
 
  .phone {
     margin-right: 20px;
+ }
+
+ @media (max-width: 768px) {
+  .contactPanel {
+    margin-right: 0px;
+        flex-direction: column;
+        display: none;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .social__item a {
+        padding: 9px 9px 5px;
+  }
  }

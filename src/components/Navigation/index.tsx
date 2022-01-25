@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './style.module.css'
 
+import ContactSocial from '../ContactPanel/ContactSocial';
 
   
 
@@ -11,14 +12,14 @@ import { useTranslation } from 'next-i18next';
 
 import ContactButton from '../ContactForm/ContactButton';
  
-const Navigation = () => {
+const Navigation = (props: any) => {
 
 	const { t } = useTranslation('navigation');
 
 
 
 	return (
-		<div className={styles.navPanel}>
+		<div className={styles.navPanel} style={props.type && props.type == "mobilemenu" && {display: "block"}}>
 		<div className={styles.nav}>
 			<Link href="/">
     		<a>{t('homepage')}</a>
@@ -41,7 +42,11 @@ const Navigation = () => {
   		<Link href="/contacts">
     		<a>{t('contacts')}</a>
   		</Link>
+
+  		{props.type && props.type == "mobilemenu" && <ContactSocial />}
   		</div>
+
+
 
   		<div className={styles.chat}>
  

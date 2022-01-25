@@ -32,6 +32,10 @@ import CallbackButton from '../src/components/CallbackForm/CallbackButton';
 const Home: NextPage = (props) => {
 
 
+  ///////////////////////////{ window && window.screen.width > 768 ? "animate__fadeInLeft" : "animate__fadeInUp"} 
+  //////////////////////////COMPONNT !! 
+
+
   const [nextGo, setNextGo] = useState(false)
 
  
@@ -73,8 +77,8 @@ useEffect(() => {
         <div className={styles.container} style={{padding: "20px 0px", fontSize: "18px", maxWidth: "900px"}}>
           <div className={styles.callback__wrap}>
             {/* <AnimationOnScroll animateIn="animate__bounceIn"> <div>d</div></AnimationOnScroll> */}
-           <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}> <h3>{t('about9')}</h3></AnimationOnScroll>
-           <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}> <p>{t('about2')}</p></AnimationOnScroll>
+           <AnimationOnScroll animateIn={ window && window.screen.width > 768 ? "animate__fadeInLeft" : "animate__fadeInUp"} animateOnce={true}> <h3>{t('about9')}</h3></AnimationOnScroll>
+           <AnimationOnScroll animateIn={ window && window.screen.width > 768 ? "animate__fadeInRight" : "animate__fadeInUp"} animateOnce={true}> <p>{t('about2')}</p></AnimationOnScroll>
 <CallbackButton className="btn-black"/>
           </div>  
         </div>
@@ -97,7 +101,7 @@ useEffect(() => {
        <div className={`${styles.container}`}>
       <div className={styles.infopage__item}>
         <div className={`${styles.infopage__left} ${styles.infopage__text}`}>
-<AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><h3>{t('about4')}</h3></AnimationOnScroll>
+<AnimationOnScroll animateIn={ window && window.screen.width > 768 ? "animate__fadeInLeft" : "animate__fadeInUp"}  animateOnce={true}><h3>{t('about4')}</h3></AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><p> {t('about5')} {t('about6')} {t('about7')}</p></AnimationOnScroll>
         </div>
         <div className={`${styles.infopage__right} ${styles.infopage__image}`}>

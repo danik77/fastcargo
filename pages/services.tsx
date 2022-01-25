@@ -13,6 +13,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
  import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
+
+
+
  const SERVICES = 13;
 
 
@@ -35,6 +38,8 @@ const IMAGES = [
  
 const Services: NextPage = (props) => {
 
+  ///////////////CPMPONENT { window && window.screen.width > 768 ? "animate__fadeInLeft" : "animate__fadeInUp"} 
+
   const { t } = useTranslation('common');
 
 const [nextGo, setNextGo] = useState(false)
@@ -47,7 +52,7 @@ const [nextGo, setNextGo] = useState(false)
   return (
     <>
     {nextGo &&
-      <> 
+      <div className={styles.services}> 
             <div style={{backgroundImage: 'url(/images/cargo2.jpg)'}} className={`${styles.page} ${styles.pageText} ${styles.background}`}>
             <div  className={styles.sliderStyle}></div>
    
@@ -71,7 +76,7 @@ const [nextGo, setNextGo] = useState(false)
     { i != 0 &&
     <div className={styles.infopage__item}>
       <div className={`${styles.infopage__left}  ${i %2 == 1 ? `${styles.infopage__label}` : `${styles.infopage__icon}`}`}>
-        {i %2 == 1 &&  <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p>{t(`services${i}`)}</p></AnimationOnScroll>}
+        {i %2 == 1 &&  <AnimationOnScroll animateIn={ window && window.screen.width > 768 ? "animate__fadeInLeft" : "animate__fadeInUp"}  animateOnce={true}><p>{t(`services${i}`)}</p></AnimationOnScroll>}
 
           {i %2 == 0 && <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}><Image
               src={IMAGES[i] ? `/images/services/${IMAGES[i]}` : "/images/icons/box.png"}
@@ -97,7 +102,7 @@ const [nextGo, setNextGo] = useState(false)
             </AnimationOnScroll>
           }
 
-         {i %2 == 0 &&   <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><p>{t(`services${i}`)}</p></AnimationOnScroll>}
+         {i %2 == 0 &&   <AnimationOnScroll animateIn={ window && window.screen.width > 768 ? "animate__fadeInRight" : "animate__fadeInUp"}  animateOnce={true}><p>{t(`services${i}`)}</p></AnimationOnScroll>}
       </div>
  
     </div>
@@ -188,7 +193,7 @@ const [nextGo, setNextGo] = useState(false)
     <div className={`${styles.container} ${styles.main} `}><CallbackButton /></div>
     </div>  */}
 
-    </>
+    </div>
   }
   </>
   )

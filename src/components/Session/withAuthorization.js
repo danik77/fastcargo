@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 //import { withRouter } from 'react-router-dom';
-import { compose } from 'recompose';
+//import { compose } from 'recompose';
 
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
@@ -20,6 +20,7 @@ const withAuthorization = condition => Component => {
         authUser => {
           if (!condition(authUser)) {
            router.push(ROUTES.SIGN_IN)
+           
           }
         },
         () => router.push(ROUTES.SIGN_IN),
@@ -43,10 +44,16 @@ const withAuthorization = condition => Component => {
       );
   }
 
+/*
   return compose(
    // withRouter,
     withFirebase,
   )(WithAuthorization);
+*/
+
+return withFirebase(WithAuthorization)
+
+
 };
 
 

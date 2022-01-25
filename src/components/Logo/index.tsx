@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import styles from './style.module.css';
+
 const Logo = (props: any) => {
 	return (
-		<div className="logo" style={props.style == "header" ? {position: "absolute", left: "50px"} :{position: "relative" }} >
+		<div className={props.style == "header" ? styles.headerLogo : styles.logo} >
 			<Link href="/">
 			<a>
 			<Image

@@ -108,6 +108,16 @@ const Slider = () => {
 
 export default Slider;
 
+
+/*
+    <AliceCarousel  autoPlay autoPlayInterval="2500" infinite disableDotsControls disableButtonsControls>
+          {props.slider.map((item) => (
+            <img onLoad={() =>{setloading(false)}} src={item.url} className="sliderimg" style={{width: "100%"}}/>
+          ))}
+        </AliceCarousel>
+
+*/
+
 //          {/* onLoadingComplete = {() => setLoad(true)} */}
 
 //  {/* <LoadContext.Consumer>{ ({load, setLoad}) => */}

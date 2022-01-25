@@ -11,3 +11,16 @@ export default function handler(
 ) {
   res.status(200).json({ name: 'John Doe' })
 }
+
+
+
+/*
+firebase.db.ref('users')
+      .on('value', snapshot => {
+        const dataObject = snapshot.val();
+  console.log("uuu");
+        console.log(dataObject)
+        return dataObject;
+ 
+      })
+      */
