@@ -94,9 +94,9 @@ const CalculatorForm = (props: any) => {
 				<label>{t('add-info')}</label>
 				<input type="text" name="addInfo" value={formData.addInfo} onChange={handleChange} placeholder={t('add-info')}   />
  				<label>{t('contacts')}</label>
- 				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')}   />
- 				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')}  />
- 				<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')}  />
+ 				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name')}  required={true} />
+ 				<input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder={t('phone')}  required={true}  />
+ 				<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder={t('email')}  required={true} />
 
 				<input type="submit" className="btn" value={t('calc-value')} />
 
