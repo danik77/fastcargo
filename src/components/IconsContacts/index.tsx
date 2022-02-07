@@ -2,16 +2,19 @@
 import styles from './style.module.css';
 import { useTranslation } from 'next-i18next';
  import {DataContext} from '../../../pages/_app'
+
+ import { useContext } from 'react'
+
+
  const IconsContacts = () => {
 
 const { t, i18n } = useTranslation('icons');
 
+  const data = useContext(DataContext)
 
  
    return (
-
-        <DataContext.Consumer>
-   { data => 
+ 
 <div className={styles.contactsIcons} >
           <div className={styles.contactsIcons__item}>
           <div>
@@ -69,8 +72,7 @@ const { t, i18n } = useTranslation('icons');
             </div>
           </div>
         </div>
-      }
-      </DataContext.Consumer>
+    
  
      );
  }

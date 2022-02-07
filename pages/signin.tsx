@@ -1,7 +1,15 @@
 import SignIn from '../src/components/SignIn';
 import styles from '../styles/Home.module.css'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { useTranslation } from 'next-i18next';
 
 const SignInPage = () => {
+
+    const { t } = useTranslation('common');
+
+
+
 	return (
  
 
@@ -45,3 +53,20 @@ const SignInPage = () => {
 
 
 export default SignInPage;
+
+
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+ 
+
+ 
+
+
+  return {
+    props: {
+ 
+   
+      ...(await serverSideTranslations(locale, ['common', 'navigation'])),
+    },
+  };
+}

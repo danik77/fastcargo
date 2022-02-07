@@ -6,6 +6,9 @@ import { useTranslation } from 'next-i18next';
 
 import { sendMail } from '../../functions.js';
 
+ import MessageSent from '../MessageSent';
+ 
+
 const INITIAL_STATE = {
 	name: "",
 	phone: ""
@@ -17,7 +20,7 @@ const CallbackForm = (props: any) => {
 
 	const [formData, setFormData] = useState(INITIAL_STATE);
 	const [sent, setSent] = useState(false);
-
+const [hide, setHide] = useState(false);
 
 
 	const submitForm = (e: any) => {
@@ -25,14 +28,15 @@ const CallbackForm = (props: any) => {
 		console.log(formData);
 
 		 
-		const subject = "Message from site";
+		const subject = "Запит на дзвінок з сайту fastcargo.com.ua";
 		sendMail(formData, subject);
 
+if(props.type !== "static")  setHide(true); 
+setSent(true)
 
-
-		props.closeForm && props.closeForm();
+		/// props.closeForm && props.closeForm();
 		setFormData(INITIAL_STATE);
-		alert('Done'); ////translate !!! 
+		//alert('Done'); ////translate !!! 
 		//setSent(true); !!!!!!!!!!!!!!!!!!!!!!!!!!!11  if error
 	//	alert("Send")
 	}
@@ -42,11 +46,23 @@ const CallbackForm = (props: any) => {
 	}
 
 
-	return (
-		<div className={props.className}>
-			<form className={style.contact__form} onSubmit={submitForm}>
+	const closePopup = () => {
+		setSent(false)
 
-					{ !sent && (
+		props.closeForm && props.closeForm();
+	} 
+
+
+	return (
+		<>	
+
+		{!hide &&
+		<div className={props.className}>
+			  
+
+				 <form className={style.contact__form} onSubmit={submitForm}>
+
+				
 						<>
 						<h3>{t('get-price')}</h3>
 				<input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={t('name') } required={true}/>
@@ -54,7 +70,11 @@ const CallbackForm = (props: any) => {
 				<input type="submit" className="btn" value={t('send')} />
 								<p>{t('data-used')}</p>
 								</>
-								)}
+							 
+
+
+ 
+
 
 
 					
@@ -70,12 +90,30 @@ const CallbackForm = (props: any) => {
 			</form>
 
  
+ 
 		</div>
+	}
+	{ sent   &&
+			<MessageSent closePopup={closePopup}/>
+		}
+		</>
 	);
 }
 
 export default CallbackForm;
 
+/*
+
+CallbackForm
+
+*/
+//import MessageSent from '../MessageSent';
+
+/*
+	{ sent &&
+			<MessageSent closePopup={closePopup}/>
+		}
+		*/
 
 /*
 	e.preventDefault();

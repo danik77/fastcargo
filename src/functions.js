@@ -1,15 +1,36 @@
+
+import { useContext } from 'react'
+import { DataContext } from '../pages/_app'
+
+//import firebase from '../pages/_app.tsx'
+import Firebase, { FirebaseContext } from '../src/components/Firebase';
+
+ const firebase = new Firebase();
+
+
+
 export const sendMail = (data, subject) => {
 
+
+	//const contextData = useContext(DataContext)
+
 	const time = new Date().toLocaleString();
-	const address = 'danik77p@gmail.com'
-	const mail = {...data, subject, time, address};
+	  //contextData?.email; //'danik77p@gmail.com'
+	 
 	const mailServer = 	`https://yanmall.leopolis.org.ua/mail-fastcargo.php`
+console.log("fdd")
+console.log(firebase)
 
+ firebase.db.ref('data').on('value', snapshot => {
+        //setData(snapshot.val());
+       // setLoad(true);
 
+        const contextData = snapshot.val()
 
-console.log(mail)
+			const address = contextData.email;
+const mail = {...data, subject, time, address};
 
-	fetch(mailServer, {
+       	fetch(mailServer, {
 		  method: 'POST',
 		  headers: {
 		    'Content-Type': 'application/json'
@@ -28,5 +49,15 @@ console.log(mail)
 
 
 
+      
+     });
+
+
+ 
+
+
 
 }
+
+
+  

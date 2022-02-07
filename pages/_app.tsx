@@ -26,6 +26,7 @@ export const firebase = new Firebase();
 
 
 
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   const [load,setLoad] = useState(false);
@@ -47,8 +48,15 @@ useEffect(() => {
   return (
     <>
     <Head>
-      <title>Fast Cargo</title>
-      <meta name="description" content="Fast Cargo" />
+      <title>Fast Cargo</title> 
+<meta name="description" content="Fast Cargo" />
+
+{/*
+<meta property="og:title" content="    ">
+<meta property="og:description" content="  ">
+<meta property="og:url" content="https://snipcart.com/">
+<meta property="og:type" content="website">*/}
+ 
       <link rel="icon" href="/favicon.ico" />
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

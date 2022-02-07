@@ -12,6 +12,12 @@ import localStyle from './style.module.css' //
 
 import {DataContext} from '../../../pages/_app'
 
+
+
+import ContactButton from '../ContactForm/ContactButton';
+
+
+
 const MobileMenuButton = (props) => {
 	const handleClick = () => {
 		props.toggleMobMenu();
@@ -69,6 +75,8 @@ const Header = () => {
 		</div>
 		{ showMenu &&	<MobileMenu showMenu={showMenu} closeMobMenu={closeMobMenu} /> }
 
+
+		<ContactButton />
 		</>
 	}
 	 </DataContext.Consumer>

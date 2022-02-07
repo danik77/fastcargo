@@ -47,11 +47,12 @@ const Navigation = (props: any) => {
   		</div>
 
 
-
+{/*
   		<div className={styles.chat}>
  
                   <ContactButton />
   		</div>
+  	*/}
 		</div>
 		)
 }

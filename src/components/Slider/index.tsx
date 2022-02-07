@@ -96,7 +96,7 @@ const Slider = () => {
       
             </div>
             <div className={style.slider__right}>
-              <CallbackForm />
+              <CallbackForm type="static" />
               
               
             </div>

@@ -146,7 +146,7 @@ const onChangeText = (event: any) => {
     });
 
     e.preventDefault();
-    alert('Done');
+    alert('Дані змінено');
   }
 
 
