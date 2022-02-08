@@ -51,8 +51,8 @@
 @media (max-width: 768px) {
 
       .header {
-    position: relative;
-     background: linear-gradient(284.89deg, #547608 40.15%, #7fd300 178.17%);
+    position: absolute;
+     
          align-items: center;
   }
   
@@ -60,4 +60,9 @@
 .header-container {
     width: auto;
 }
+
+
+  
+
+
 }

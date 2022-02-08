@@ -65,16 +65,24 @@ background: #bebf3087;
 @media (max-width: 768px) {
 
 
+
   .navPanel {
     position: relative;
     display: none;
         margin-left: 0px;
             margin-bottom: 0px;
+
+
+               position: absolute;
+    width: 100%; 
+    top: 150px;
+    
   }
   .nav {
     border-radius: 0px;
         text-align: center;
             margin-bottom: 0px;
+            background: #bebf30;
   }
 
   }

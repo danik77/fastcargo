@@ -347,7 +347,7 @@ position: relative;
    }
 
   .page {
-    padding-top: 0px;
+        padding-top: 120px;
   }
 
   .page100vh {
@@ -355,7 +355,8 @@ position: relative;
   }
 
   .sliderStyle {
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
   }
 
   .infopage__item  {

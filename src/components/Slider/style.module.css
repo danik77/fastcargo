@@ -93,6 +93,16 @@
 
 
 @media (max-width: 768px) {
+
+  .homepage__slider {
+    /* height: 400px; */
+  }
+
+
+  .homepage__slider img {
+    height: 100% !important;
+  }
+
   .slider__right {
     display: none;
   }
@@ -105,7 +115,7 @@
   .slider__info {
     left: 30px;
       width: calc(100% - 60px);
-      top: 0;
+     top: 150px;
   }
 
   .slider__left h2 {

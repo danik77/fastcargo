@@ -35,6 +35,9 @@ const sliderStyle: object = {
     backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.9) 19.7%, rgba(0, 0, 0, 0.7) 55.28%)`
 }
 
+
+const slideWidth = 1200;
+const slideHeight = 1200;
  
 const Slider = () => {
 
@@ -62,23 +65,23 @@ const Slider = () => {
             <Image
   			      src="/images/cargo1.jpg"
   			      alt="Picture of the author"
-  			      width={1200}
-  			      height={600}
+  			      width={slideWidth}
+  			      height={slideHeight}
               layout="responsive"
      
   			    />
   			    <Image
   			      src="/images/cargo2.jpg"
   			      alt="Picture of the author"
-  			      width={1200}
-  			      height={600}
+  			      width={slideWidth}
+  			      height={slideHeight}
               layout="responsive"
   			    />
  <Image
               src="/images/cargo7.jpg"
               alt="Picture of the author"
-              width={1200}
-              height={600}
+              width={slideWidth}
+              height={slideHeight}
               layout="responsive"
             />
  
