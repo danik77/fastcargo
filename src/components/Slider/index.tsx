@@ -1,116 +1,101 @@
-import Image from 'next/image';
-import AliceCarousel from 'react-alice-carousel';
+import Image from "next/image";
+import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import CallbackForm from '../CallbackForm/CallbackForm';
+import CallbackForm from "../CallbackForm/CallbackForm";
 
-import style from './style.module.css';
+import style from "./style.module.css";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import LoadContext from '../context'
+import LoadContext from "../context";
 
+import { useTranslation } from "next-i18next";
 
-
-import { useTranslation } from 'next-i18next';
-
- 
- 
-
-
-const settings = { ///////////////////я для чого
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+const settings = {
+  ///////////////////я для чого
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const sliderStyle: object = {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    zIndex: '2',
-    top: '0',
-    opacity: '0.5',
-    backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.9) 19.7%, rgba(0, 0, 0, 0.7) 55.28%)`
-}
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  zIndex: "2",
+  top: "0",
+  opacity: "0.5",
+  backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.9) 19.7%, rgba(0, 0, 0, 0.7) 55.28%)`,
+};
 
+const slideWidth = 1600;
+const slideHeight = 800;
 
-const slideWidth = 1200;
-const slideHeight = 1200;
- 
 const Slider = () => {
+  const { t } = useTranslation("common");
 
-    const { t } = useTranslation('common');
-
-
-    const handleLoading = () => {
-      console.log("e1e")
-     // setLoad(true)
-      //setLoad(true)
-    }
+  const handleLoading = () => {
+    console.log("e1e");
+    // setLoad(true)
+    //setLoad(true)
+  };
 
   //const [load, setLoad] = useState(false);
 
-//console.log(load)
+  //console.log(load)
 
-	return (
-  			<div className={style.homepage__slider}>
+  return (
+    <div className={style.homepage__slider}>
+      <div>
+        <AliceCarousel
+          autoPlay
+          autoPlayInterval={4500}
+          infinite
+          disableDotsControls
+          disableButtonsControls
+        >
+          <Image
+            src="/images/cargo1.jpg"
+            alt="Picture of the author"
+            width={slideWidth}
+            height={slideHeight}
+            layout="responsive"
+          />
+          <Image
+            src="/images/cargo2.jpg"
+            alt="Picture of the author"
+            width={slideWidth}
+            height={slideHeight}
+            layout="responsive"
+          />
+          <Image
+            src="/images/cargo7.jpg"
+            alt="Picture of the author"
+            width={slideWidth}
+            height={slideHeight}
+            layout="responsive"
+          />
+        </AliceCarousel>
 
-       
+        <div style={sliderStyle} className="slider-overlay"></div>
+      </div>
 
-         
-           <div>
-          <AliceCarousel  autoPlay  autoPlayInterval={4500} infinite disableDotsControls disableButtonsControls>
-            <Image
-  			      src="/images/cargo1.jpg"
-  			      alt="Picture of the author"
-  			      width={slideWidth}
-  			      height={slideHeight}
-              layout="responsive"
-     
-  			    />
-  			    <Image
-  			      src="/images/cargo2.jpg"
-  			      alt="Picture of the author"
-  			      width={slideWidth}
-  			      height={slideHeight}
-              layout="responsive"
-  			    />
- <Image
-              src="/images/cargo7.jpg"
-              alt="Picture of the author"
-              width={slideWidth}
-              height={slideHeight}
-              layout="responsive"
-            />
- 
-     
-          </AliceCarousel>
-
-            <div style={sliderStyle} className="slider-overlay"></div>
-           </div>
-         
-            
-          <div className={style.slider__info}>
-            <div className={style.slider__left}>
-              <h2>{t('slider-title')}</h2>
-              {/* <p>{t('slider-desc')}</p> */}
-      
-            </div>
-            <div className={style.slider__right}>
-              <CallbackForm type="static" />
-              
-              
-            </div>
-          </div>
-      	</div>
-   
-		)
-}
+      <div className={style.slider__info}>
+        <div className={style.slider__left}>
+          <h2>{t("slider-title")}</h2>
+          {/* <p>{t('slider-desc')}</p> */}
+        </div>
+        <div className={style.slider__right}>
+          <CallbackForm type="static" />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Slider;
-
 
 /*
     <AliceCarousel  autoPlay autoPlayInterval="2500" infinite disableDotsControls disableButtonsControls>
@@ -166,7 +151,7 @@ const MainSlider = (props) => {
   return (
     <>
       <div className="lds-dual-ring" style={loading ? {} : {display: 'none'}}></div>
-    	<div className={props.className + " slider"} style={loading ? {display: 'none'} : {}}>
+      <div className={props.className + " slider"} style={loading ? {display: 'none'} : {}}>
         <AliceCarousel  autoPlay autoPlayInterval="2500" infinite disableDotsControls disableButtonsControls>
           {props.slider.map((item) => (
             <img onLoad={() =>{setloading(false)}} src={item.url} className="sliderimg" style={{width: "100%"}}/>
@@ -176,11 +161,11 @@ const MainSlider = (props) => {
         <div style={sliderStyle} className="slider-overlay"></div>
 
         <div className="slider__info">
-        	<h1>{props.data.sliderTitle}</h1>
-        		<p>{props.data.sliderText}</p>
-        		<BookingButton />
+          <h1>{props.data.sliderTitle}</h1>
+            <p>{props.data.sliderText}</p>
+            <BookingButton />
         </div>
-    	</div>
+      </div>
     </>
   );
 
