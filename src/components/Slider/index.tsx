@@ -5,7 +5,7 @@ import CallbackForm from "../CallbackForm/CallbackForm";
 
 import style from "./style.module.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import LoadContext from "../context";
 
@@ -30,8 +30,13 @@ const sliderStyle: object = {
   backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.9) 19.7%, rgba(0, 0, 0, 0.7) 55.28%)`,
 };
 
-const slideWidth = 1600;
-const slideHeight = 800;
+let slideWidth = 1200;
+let slideHeight = 1200;
+
+if (typeof window !== "undefined") {
+  slideWidth = window.innerWidth > 768 ? 1600 : 800;
+  slideHeight = window.innerWidth > 768 ? 800 : 800;
+}
 
 const Slider = () => {
   const { t } = useTranslation("common");
