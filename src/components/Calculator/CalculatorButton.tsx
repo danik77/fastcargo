@@ -1,8 +1,6 @@
 import CalculatorPopup from './CalculatorPopup';
 import { useState } from 'react';
  
-
-
 const CalculatorButton = () => {
 
 	const [showForm, setShowForm] = useState(false);
@@ -22,6 +20,5 @@ const CalculatorButton = () => {
 		</>
 	);
 }
-
 
 export default CalculatorButton;

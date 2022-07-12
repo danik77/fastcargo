@@ -1,12 +1,8 @@
-import CalculatorButton from './CalculatorButton'
-import CalculatorForm from './CalculatorForm'
+import CalculatorButton from "./CalculatorButton";
+import CalculatorForm from "./CalculatorForm";
 
 const Calculator = () => {
-	return (
-		<>
-			<CalculatorForm />
-		</>
-		)
-}
+	return <CalculatorForm />;
+};
 
 export default Calculator;

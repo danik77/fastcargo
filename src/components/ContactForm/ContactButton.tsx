@@ -1,7 +1,6 @@
 import ContactPopup from './ContactPopup';
 import { useState } from 'react';
 import Image from 'next/image'
-
 import style from './style.module.scss';
 
 const ContactButton = (props:any) => {
@@ -30,6 +29,5 @@ const ContactButton = (props:any) => {
 		</div>
 	);
 }
-
 
 export default ContactButton;
